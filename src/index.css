@@ -162,4 +162,5 @@ table {
   align-items: center;
   width: 64px;
   justify-content: space-between;
+  cursor: pointer;
 }
