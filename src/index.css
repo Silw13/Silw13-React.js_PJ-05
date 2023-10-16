@@ -151,6 +151,11 @@ table {
   justify-content: space-between;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .kanbanName {
   font-size: 28px;
   color: white;
@@ -163,4 +168,10 @@ table {
   width: 64px;
   justify-content: space-between;
   cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  background-color: white;
+  top: 70px;
 }

@@ -21,6 +21,8 @@ const arrowOpen = <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmln
     <path d="M1.415 7.79001L6 3.20501L10.585 7.79001L12 6.37501L6 0.375008L0 6.37501L1.415 7.79001Z" fill="white" />
 </svg>
 
+
+
 export default function UserMenu() {
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -29,9 +31,22 @@ export default function UserMenu() {
     }
 
     return (
-        <div className="userMenu" onClick={handleClick}>
-            {userAvatar}
-            {openMenu ? arrowOpen : arrowClose}
-        </div>
+        <>
+            <div className="userMenu" onClick={handleClick}>
+                {userAvatar}
+                {openMenu ? arrowOpen : arrowClose}
+                {openMenu && (
+                    <div className="dropdownMenu">
+                        <ul>
+                            <li>Profile</li>
+                            <li>Log out</li>
+                        </ul>
+                    </div>
+                )}
+            </div>
+
+        </>
+
     );
 }
+

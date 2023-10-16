@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 export default function Header() {
-    return (    
+    return (
         <div className='header'>
             <div className='header__container'>
                 <h1 className="kanbanName">Awesome Kanban Board</h1>
