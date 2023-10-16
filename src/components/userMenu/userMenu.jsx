@@ -37,6 +37,7 @@ export default function UserMenu() {
                 {openMenu ? arrowOpen : arrowClose}
                 {openMenu && (
                     <div className="dropdownMenu">
+                        <div className="dropdownMenu__tail"></div>
                         <ul>
                             <li>Profile</li>
                             <li>Log out</li>

@@ -174,4 +174,20 @@ table {
   position: absolute;
   background-color: white;
   top: 70px;
+  padding: 10px 30px 10px 10px;
+  border-radius: 10px;
+}
+
+.dropdownMenu li {
+  margin-top: 5px;
+}
+
+.dropdownMenu__tail {
+  background-color: white;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: -7px;
+  left: 14px;
+  transform: rotate(45deg);
 }
