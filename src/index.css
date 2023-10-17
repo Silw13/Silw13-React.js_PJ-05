@@ -191,3 +191,31 @@ table {
   left: 14px;
   transform: rotate(45deg);
 }
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.taskList {
+  width: 282px;
+  background-color: #EBECF0;
+  border-radius: 10px;
+}
+
+.taskList__wrapper {
+  margin: 12px 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.addTaskButton {
+  margin: 12px 0px 0px 0px;
+}
+
+.addTaskForm {
+  display: flex;
+  flex-direction: column;
+}

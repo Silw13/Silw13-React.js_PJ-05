@@ -1,7 +1,5 @@
 import React from "react";
 import UserMenu from "../userMenu/userMenu"
-import { useState } from 'react';
-
 
 
 export default function Header() {

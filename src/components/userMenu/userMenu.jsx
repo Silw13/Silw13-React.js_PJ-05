@@ -31,23 +31,19 @@ export default function UserMenu() {
     }
 
     return (
-        <>
-            <div className="userMenu" onClick={handleClick}>
-                {userAvatar}
-                {openMenu ? arrowOpen : arrowClose}
-                {openMenu && (
-                    <div className="dropdownMenu">
-                        <div className="dropdownMenu__tail"></div>
-                        <ul>
-                            <li>Profile</li>
-                            <li>Log out</li>
-                        </ul>
-                    </div>
-                )}
-            </div>
-
-        </>
-
+        <div className="userMenu" onClick={handleClick}>
+            {userAvatar}
+            {openMenu ? arrowOpen : arrowClose}
+            {openMenu && (
+                <div className="dropdownMenu">
+                    <div className="dropdownMenu__tail"></div>
+                    <ul>
+                        <li>Profile</li>
+                        <li>Log out</li>
+                    </ul>
+                </div>
+            )}
+        </div>
     );
 }
 
