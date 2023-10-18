@@ -1,21 +1,12 @@
-import React from "react";
-import TaskList from "../taskList/taskList.jsx"
+import Column from "./column/column";
 
 export default function Board() {
     return (
-        <div className="container main-content">
-            < TaskList
-                listName={'Backlog'}
-            />
-            < TaskList
-                listName={'Ready'}
-            />
-            < TaskList
-                listName={'In Progress'}
-            />
-            < TaskList
-                listName={'Finished'}
-            />
+        <div className="board">
+            <Column />
+            <Column />
+            <Column />
+            <Column />
         </div>
     )
 }

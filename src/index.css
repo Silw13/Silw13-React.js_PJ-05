@@ -192,30 +192,38 @@ table {
   transform: rotate(45deg);
 }
 
-.main-content {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #0067A3;
+  color: #ffffff;
+  width: 100%;
+  height: 55px;
 }
 
-.taskList {
-  width: 282px;
+.board {
+  display: flex;
+  max-width: 1200px;
+  margin: 25px auto;
+  justify-content: space-between;
+}
+
+.column {
   background-color: #EBECF0;
   border-radius: 10px;
+  width: 282px;
 }
 
-.taskList__wrapper {
-  margin: 12px 12px 12px 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.column__wrapper {
+  margin: 12px;
 }
 
-.addTaskButton {
-  margin: 12px 0px 0px 0px;
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 12px 0px;
 }
 
-.addTaskForm {
-  display: flex;
-  flex-direction: column;
+.card__content {
+  padding: 8px;
 }

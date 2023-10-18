@@ -4,11 +4,11 @@ import UserMenu from "../userMenu/userMenu"
 
 export default function Header() {
     return (
-        <div className='header'>
+        <header className='header'>
             <div className='header__container'>
                 <h1 className="kanbanName">Awesome Kanban Board</h1>
                 <UserMenu />
             </div>
-        </div>
+        </header>
     );
 }
