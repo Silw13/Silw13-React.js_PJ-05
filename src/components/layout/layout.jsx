@@ -1,7 +1,11 @@
+import { TaskProvider } from "../../hooks/task/task-provider"
+
 export const Layout = (props) => {
     return (
-        <div className="layout">
-            {props.children}
-        </div>
+        <TaskProvider>
+            <div className="layout">
+                {props.children}
+            </div>
+        </TaskProvider>
     )
 }
