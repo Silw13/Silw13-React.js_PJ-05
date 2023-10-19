@@ -25,15 +25,12 @@ export default function Column(props) {
                 <div className="column__header"><b>{props.name}</b></div >
 
                 {hasTasks &&
-                    //scrollbars    
-
-                    tasks.map((task) =>
-
-                        <Card key={task.id} id={task.id} name={task.name} />)
-                    //scrollbars
-
+                    <Scrollbars autoHeight autoHeightMax={538}>
+                        {tasks.map((task) =>
+                            <Card key={task.id} id={task.id} name={task.name} />
+                        )}
+                    </Scrollbars>
                 }
-
                 {isNewTaskInputShown &&
                     <div>
                         <input className='input' onInput={onInputCard} />
