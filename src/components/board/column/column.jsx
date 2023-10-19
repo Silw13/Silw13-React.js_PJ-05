@@ -22,7 +22,7 @@ export default function Column(props) {
     return (
         <div className="column">
             <div className="column__wrapper">
-                <div className="column__header">{props.name}</div >
+                <div className="column__header"><b>{props.name}</b></div >
 
                 {hasTasks &&
                     //scrollbars    
@@ -36,12 +36,12 @@ export default function Column(props) {
 
                 {isNewTaskInputShown &&
                     <div>
-                        <input onInput={onInputCard} />
+                        <input className='input' onInput={onInputCard} />
                     </div>
                 }
 
                 {isNewTaskSelectShown &&
-                    <select onChange={(e) =>
+                    <select className="select" onChange={(e) =>
                         setSelectedTaskId(e.target.value)}
                     >
                         <option>Select Task</option>
@@ -53,27 +53,30 @@ export default function Column(props) {
 
                 <div >
                     {(!isNewTaskInputShown && !isNewTaskSelectShown) &&
-                        <button onClick={() => props.state === 'backlog'
+                        <button className="button button_addTask" onClick={() => props.state === 'backlog'
                             ? setIsNewTaskInputShown(true)
                             : setIsNewTaskSelectShown(true)}
-                        >Add Task</button>}
+                        > + Add Task</button>}
 
                     {(isNewTaskInputShown || isNewTaskSelectShown) &&
-                        <button onClick={() => {
+                        <button className="button button_submit" onClick={() => {
                             if (props.state === 'backlog') {
-                                setIsNewTaskInputShown(false)
-                                addTask(inputCardName);
-                                setInputCardName(undefined);
+                                setIsNewTaskInputShown(false);
+                                if (inputCardName) {
+                                    addTask(inputCardName);
+                                    setInputCardName(undefined);
+                                }
                             } else {
                                 setIsNewTaskSelectShown(false);
                                 moveTask(selectedTaskId, props.state);
                             }
-                        }}
-                        >Submit</button>
+                        }}>
+                            Submit
+                        </button>
                     }
                     {(isNewTaskInputShown || isNewTaskSelectShown)
-                        && <button onClick={() =>
-                            props.state = 'backlog'
+                        && <button className="button button_hide" onClick={() =>
+                            props.state === 'backlog'
                                 ? setIsNewTaskInputShown(false)
                                 : setIsNewTaskSelectShown(false)
                         }> Hide</button>}
