@@ -256,13 +256,24 @@ table {
 
 .button_addTask {
   color: #5E6C84;
+}
 
+.button_addTask:hover {
+  background-color: #dee0e4;
 }
 
 .button_hide {
   background-color: #0079BF;
   color: white;
   margin-left: 10px;
+}
+
+.button_hide:hover {
+  background-color: #195d85;
+}
+
+.button_submit:hover {
+  background-color: #195d85;
 }
 
 .button_submit {
@@ -319,4 +330,62 @@ table {
   display: flex;
   max-width: 80%;
   justify-content: space-between;
+}
+
+.button_save {
+  padding: 10px;
+}
+
+.button_close {
+  padding: 10px;
+}
+
+.button_save:hover {
+  color: #ffffff;
+  background-color: #0079BF;
+}
+
+.button_close:hover {
+  color: #ffffff;
+  background-color: #0079BF;
+}
+
+
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 282px;
+  }
+
+  .header__container {
+    max-width: 282px;
+  }
+
+  .kanbanName {
+    display: none;
+  }
+
+  .header {
+    background-color: #0079BF;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .board {
+    flex-direction: column;
+    max-width: 282px;
+  }
+
+  .column {
+    margin: 10px 0px;
+  }
+
+  .userMenu {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+  }
+
 }
